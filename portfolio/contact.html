@@ -1,0 +1,88 @@
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css?family=Alkalami"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>CONTACT US</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="images/Untitled-1.png" />
+        </div>
+        <div class="navbar">
+          <nav>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="projects.html">Project</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="contact-page">
+        <div class="contain">
+
+            <div class="wrapper">
+          
+              <div class="form">
+                <h4>GET IN TOUCH</h4>
+                <h2 class="form-headline">Send us a message</h2>
+                <form id="submit-form" action="">
+                  <p>
+                    <input id="name" class="form-input" type="text" placeholder="Your Name*">
+                    <small class="name-error"></small>
+                  </p>
+                  <p>
+                    <input id="email" class="form-input" type="email" placeholder="Your Email*">
+                    <small class="name-error"></small>
+                  </p>
+                  <p class="full-width">
+                    <input id="company-name" class="form-input" type="text" placeholder="Company Name*" required>
+                    <small></small>
+                  </p>
+                  <p class="full-width">
+                    <textarea  minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+                    <small></small>
+                  </p>
+                  <p class="full-width">
+                    <input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
+                  </p>
+                  <p class="full-width">
+                    <input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
+                    <button class="reset-btn" onclick="reset()">Reset</button>
+                  </p>
+                </form>
+              </div>
+          
+              <div class="contacts contact-wrapper">
+          
+                <ul>
+                  <li>We create/develope the best website, mobile app, webapp etc. 
+                    We help you to create a stress free experince for you clients and for you as well.  </li>
+                  <span class="hightlight-contact-info">
+                    <li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> zaddytmg1@gmail.com</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+2349050773440</span></li>
+                  </span>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </main>
+
+      <footer>
+        <p>(2022) - AGU ALEXANDER KENECHUKWU - RC 1405222</p>
+      </footer>
+
+      <script src="app.js"></script>
+</body>
+</html>
