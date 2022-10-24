@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login-Page</title>
+  </head>
+  <body>
+    <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="Indicator" />
+
+                <form id="LoginForm">
+                  <input type="text" placeholder="Username" />
+                  <input type="password" placeholder="Password" />
+                  <button type="submit" class="btn-hero">Login</button>
+                  <a href="">Forgot Password?</a>
+                </form>
+
+                <form
+                  id="RegForm"
+                  name="myForm"
+                  action="/successful.html"
+                  onsubmit="return validateForm()"
+                >
+                  <input
+                    type="text"
+                    placeholder="Firstname"
+                    name="firstname"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Lastname"
+                    name="lastname"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Phone"
+                    name="phone"
+                    required
+                  />
+                  <input
+                    type="date"
+                    placeholder="Date Of Birth"
+                    name="dob"
+                    required
+                  />
+                  <select name="gender" required>
+                    <option value="gender">Gender</option>
+                    <option value="male"  required>Male</option>
+                    <option value="female"  required>Female</option>
+                  </select>
+                  <input type="color" id="colorpicker" name="color" required />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    required
+                  />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    required
+                  />
+                  <button type="submit" class="hero-btn">Register</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var LoginForm = document.getElementById("LoginForm");
+      var RegForm = document.getElementById("RegForm");
+      var Indicator = document.getElementById("Indicator");
+
+      function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(120px)";
+      }
+
+      function login() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+      }
+    </script>
+
+    <script>
+      function validateForm() {
+        let x =
+          document.forms["myForm"][
+            ("firstname",
+            "lastname",
+            "phone",
+            "dob",
+            "gender",
+            "color",
+            "emali",
+            "password")
+          ].value;
+        if (x == "") {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
